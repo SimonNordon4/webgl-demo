@@ -38,10 +38,21 @@
 			-ms-interpolation-mode: nearest-neighbor;
 		}
 	</style>
+	
 </head>
 
 <body>
 	<div id="gameContainer">
+		<script>
+			document.addEventListener('visibilitychange', function () {
+				if (document.visibilityState === 'visible') {
+					UnityLoader.instances[0].SendMessage('GameManager', 'OnFocus', 'true');
+				} else {
+					UnityLoader.instances[0].SendMessage('GameManager', 'OnFocus', 'false');
+				}
+			});
+		</script>
+		
 		<canvas id="unity-canvas" data-pixel-art="false"></canvas>
 		<script src="Build/InSitu v1.loader.js"></script>
 		<script>
