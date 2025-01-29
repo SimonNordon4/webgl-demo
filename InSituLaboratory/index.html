@@ -42,18 +42,18 @@
 
 <body>
 	<div id="gameContainer">
-		<canvas id="unity-canvas" data-pixel-art="true"></canvas>
-		<script src="Build/InSitu v1.loader.js"></script>
+		<canvas id="unity-canvas" data-pixel-art="false"></canvas>
+		<script src="Build/InSitu v3.loader.js"></script>
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/InSitu v1.data.unityweb",
-				frameworkUrl: "Build/InSitu v1.framework.js.unityweb",
-				codeUrl: "Build/InSitu v1.wasm.unityweb",
+				dataUrl: "Build/InSitu v3.data.unityweb",
+				frameworkUrl: "Build/InSitu v3.framework.js.unityweb",
+				codeUrl: "Build/InSitu v3.wasm.unityweb",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "CSIRO",
 				productName: "InSitu",
-				productVersion: "1",
+				productVersion: "3",
 			};
 			var scaleToFit = true;
 			function progressHandler(progress) {
